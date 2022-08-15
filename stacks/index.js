@@ -1,11 +1,12 @@
-import { MyStack } from './MyStack'
+// App Infrastructure
+
 import { App } from '@serverless-stack/resources'
+import { StorageStack } from './StorageStack'
 
 /**
  * @param {App} app
- * details: App Infrastructure
  */
-export default function (app) {
+export default function main(app) {
 	app.setDefaultFunctionProps({
 		runtime: 'nodejs16.x',
 		srcPath: 'services',
@@ -14,5 +15,5 @@ export default function (app) {
 		}
 	})
 	// Here we concatenate stacks
-	app.stack(MyStack)
+	app.stack(StorageStack)
 }
