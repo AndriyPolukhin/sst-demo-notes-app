@@ -6,7 +6,7 @@ export function StorageStack({ stack, app }) {
 		cors: [
 			{
 				maxAge: '1 day',
-				allowedOrigin: ['*'],
+				allowedOrigins: ['*'],
 				allowedHeaders: ['*'],
 				allowedMethods: ['GET', 'PUT', 'POST', 'DELETE', 'HEAD']
 			}
