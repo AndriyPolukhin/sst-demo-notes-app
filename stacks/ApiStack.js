@@ -14,7 +14,8 @@ export function ApiStack({ stack, app }) {
 			function: {
 				permissions: [table], // give persmission to access the table
 				environment: {
-					TABLE_NAME: table.tableName // passing the name to make queries
+					TABLE_NAME: table.tableName, // passing the name to make queries
+					STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY
 				}
 			}
 		},
