@@ -2,6 +2,7 @@
 
 import { App } from '@serverless-stack/resources'
 import { StorageStack } from './StorageStack'
+import { ApiStack } from './ApiStack'
 
 /**
  * @param {App} app
@@ -15,5 +16,5 @@ export default function main(app) {
 		}
 	})
 	// Here we concatenate stacks
-	app.stack(StorageStack)
+	app.stack(StorageStack).stack(ApiStack)
 }
